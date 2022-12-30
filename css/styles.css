@@ -57,16 +57,19 @@ header .nav-contact li .links-contact {
     padding-inline-start: 0;
     gap: 50px;
 }
-.nav-main__line {
+
+.nav-main__line:hover:after {
+    content: "";
+    display: block;
     position: absolute;
     bottom: -36px;
     right: 0;
     width: 100%;
     height: 5px;
-    background: var(--hoverColor);
     border-radius: 2.5px;
-    visibility: hidden;
+    background-color: var(--hoverColor);
 }
+
 a {
     color: var(--bodyColor);
     text-decoration: none;
@@ -77,11 +80,9 @@ header .nav-contact li .links-contact:focus,
 header .nav-contact li .links-contact:hover,
 header nav .nav-main li:hover a,
 header nav .nav-main li:focus a,
-header nav .nav-main li:hover .nav-main__line,
 header .nav-contact li .links-contact:hover .contact-icon {
     color: var(--hoverColor);
     fill: var(--hoverColor);
-    visibility: visible;
 }
 
 li {
@@ -131,6 +132,88 @@ li {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+}
+.backdrop__modalTitle {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 40px 40px 14px 40px;
+}
+.backdrop__modal form {
+    padding: 0px 40px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;    
+    letter-spacing: 0.01em;
+}
+.backdrop__modal form ul li label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 4px;
+    color: var(--grayColor);
+}
+.backdrop__modal form ul li label input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 40px;
+    padding: 0px 38px;
+    
+}
+.backdrop__modal form ul li label textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    
+}
+.backdrop__modal form ul li label textarea::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+}
+.backdrop__modal form ul li .check {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 20px 12px 20px 12px ;
+
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+}
+.backdrop__modal form ul li .check input {
+    width: 16px;
+    height: 15px;
+    margin-top: 4px;
+}
+.form__icon {
+    position: absolute;
+    top: 55%;
+    left: 14px;
+    fill: var(--bodyColor);
+}
+.backdrop__modal form ul li .btn-form {
+    padding: 10px 75px;
+}
+.backdrop__modal form ul .btn-form-container {
+    text-align: center;
+}
+/* .backdrop__modal form ul li label input:focus,
+.backdrop__modal form ul li label:focus .form__icon,
+.backdrop__modal form ul li label:focus textarea {
+    border:1px solid var(--hoverColor);
+    fill: var(--hoverColor);
+    background: #2196F3;
+} */
+.form__input:focus, .form__input:hover {
+    border: 1px solid var(--hoverColor);
+}
+
+.form__input:hover + .form__icon,
+.form__input:focus +.form__icon {
+    fill: var(--hoverColor);
 }
 /* Propiedades del header */
 .logo {
@@ -203,6 +286,7 @@ button {
     padding: 10px 32px;
     position: relative;
     z-index: 1;
+    border-radius: 4px;
 }
 .btn-light {
     font-weight: 500;
@@ -449,7 +533,7 @@ address > a {
 .social-nets {
     margin-top: 14px;
 }
-.social-nets > p {
+.social-nets > p, .footer__subs > p {
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 0.03em;
@@ -479,6 +563,7 @@ address > a {
 /*footer portafolio y Estudio*/
 .sc-one-footer {
     display: flex;
+    flex-wrap: wrap;
 }
 .sc-one-footer > div:not(:last-child) {
     margin-right: 70px;
@@ -512,5 +597,44 @@ address > a {
     width: 20px;
     height: 20px;
 }
+.footer__subs {
+    margin-top: 14px;
+}
+.footer__subs form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+.footer__subs form input {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    width: 358px;
+    background: none;
+    padding-left: 16px;
 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.footer__subs form button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer__subs form input::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+}
 

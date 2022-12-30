@@ -15,16 +15,13 @@
             <a class="logo" href="/">WebStudio</a>
             <ul class="nav-main links nav">
                 <li>
-                    <a href="./index.html">Estudio</a>
-                    <div class="nav-main__line"></div>
+                    <a class="nav-main__line" href="./index.html">Estudio</a>
                 </li>
                 <li>
-                    <a href="./portafolio.html">Portafolio</a>
-                    <div class="nav-main__line"></div>
+                    <a class="nav-main__line" href="./portafolio.html">Portafolio</a>
                 </li>
                 <li>
-                    <a href="#">Contactos</a>
-                    <div class="nav-main__line"></div>
+                    <a class="nav-main__line" href="#">Contactos</a>
                 </li>
             </ul>
         </nav>
@@ -51,6 +48,56 @@
     <main>
         <section class="backdrop is-hidden" data-modal>
             <div class="backdrop__modal">
+                <h2 class="backdrop__modalTitle">Deje sus datos, nos contactaremos con usted</h2>
+                <form>
+                    <ul class="">
+                        <li>
+                            <label for="name_modal">
+                                Nombre
+                                <input class="form__input" type="text" name="user_name" />
+                                <svg class="form__icon" width="12" height="12">
+                                    <use href="./images/svg/icons.svg#form_userIcon"></use>
+                                </svg>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="tel_modal">
+                                Teléfono
+                                <input class="form__input" type="tel" name="user_tel"/>
+                                <svg class="form__icon" width="13" height="13">
+                                    <use href="./images/svg/icons.svg#form_phoneIcon"></use>
+                                </svg>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                E-mail
+                                <input class="form__input" type="email" name="user_email"/>
+                                <svg class="form__icon" width="15" height="12">
+                                    <use href="./images/svg/icons.svg#form_mailIcon"></use>
+                                </svg>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                Comentarios
+                                <textarea class="form__input" name="user_feedback" placeholder="Introduzca el texto"></textarea>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="check">
+                                <input type="checkbox" name="user_checkBulletin" value="bulletin"></input>
+                                </p>
+                                    Estoy de acuerdo con el boletín informativo y acepto
+                                    los Términos y Condiciones
+                                <p>
+                            </label>
+                        </li>
+                        <li class="btn-form-container">
+                            <button type="submit" class="btn-blue btn-form">Enviar</button>
+                        </li>
+                    </ul>
+                </form>
                 <a class="bm__close-icon" data-modal-close>
                     <svg class="close-icon__svg" width="30" height="30" fill="none">
                         <use href="./images/svg/icons.svg#close_icon"></use>
@@ -353,27 +400,40 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com">
+                        <a href="https://www.twitter.com">
                             <svg class="sni__sMedia" width="20" height="20">
                                 <use href="./images/svg/icons.svg#twitter_2"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com" >
+                        <a href="https://www.facebook.com" >
                             <svg class="sni__sMedia" width="20" height="20">
                                 <use href="./images/svg/icons.svg#facebook_3"></use>
                             </svg>
                         </a>    
                     </li>
                     <li>
-                        <a href="https://www.instagram.com">
+                        <a href="https://www.linkedin.com">
                             <svg class="sni__sMedia" width="20" height="20">
                                 <use href="./images/svg/icons.svg#linkedin_4"></use>
                             </svg>
                         </a>    
                     </li>
                 </ul>            
+            </div>
+            <div class="footer__subs">
+                <!--suscribes-->
+                <p>suscríbase al boletín informativo</p>
+                <form>
+                    <input type="mail" placeholder="Correo electrónico">
+                    <button type="submit" class="btn-blue btn-form">
+                        Suscríbase
+                        <svg height="24" width="24">
+                            <use href="./images/svg/icons.svg#subs_sendIcon"></use>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
     </footer>
