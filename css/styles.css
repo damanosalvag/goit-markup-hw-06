@@ -173,7 +173,7 @@ li {
 .backdrop__modal form ul li label textarea::placeholder {
     color: rgba(117, 117, 117, 0.5);
 }
-.backdrop__modal form ul li .check {
+.backdrop__modal form ul li .user__checkBulletin__modal {
     flex-direction: row;
     align-items: flex-start;
     gap: 9px;
@@ -183,7 +183,7 @@ li {
     line-height: 24px;
     letter-spacing: 0.03em;
 }
-.backdrop__modal form ul li .check input {
+.backdrop__modal form ul li .user__checkBulletin__modal input {
     width: 16px;
     height: 15px;
     margin-top: 4px;
