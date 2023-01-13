@@ -200,15 +200,9 @@ li {
 .backdrop__modal form ul .btn-form-container {
     text-align: center;
 }
-/* .backdrop__modal form ul li label input:focus,
-.backdrop__modal form ul li label:focus .form__icon,
-.backdrop__modal form ul li label:focus textarea {
-    border:1px solid var(--hoverColor);
-    fill: var(--hoverColor);
-    background: #2196F3;
-} */
+
 .form__input:focus, .form__input:hover {
-    border: 1px solid var(--hoverColor);
+    border: 3px solid var(--hoverColor);
 }
 
 .form__input:hover + .form__icon,
